@@ -1,0 +1,29 @@
+inherit kf5
+
+NAME="kreport3"
+VERSION=3.0.1
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE report generation library"
+DESCRIPTION="KReport is a framework for the creation and generation of reports
+in multiple formats. It is used by Kexi and Calligra Plan."
+HOMEPAGE="https://community.kde.org/KReport"
+SRC_URI="mirror://kde/stable/kreport/src/kreport-${VERSION}.tar.xz"
+SRC_DIR="kreport-${VERSION}"
+PATCH_URI="3.0.1-dllexport.patch"
+
+PKG_NAMES="libKReport3_3 libKReport3-devel"
+libKReport3_3_CONTENTS="
+	usr/bin/cygKReport3-3.dll
+	usr/lib/qt5/plugins/kreport3/
+	usr/share/doc/${NAME}
+	usr/share/kreport3/
+	usr/share/kservicetypes5/kreport_elementplugin.desktop
+"
+libKReport3_devel_CONTENTS="
+	usr/include/KReport3/
+	usr/lib/cmake/KReport3/
+	usr/lib/libKReport3.dll.a
+	usr/lib/pkgconfig/KReport3.pc
+	usr/lib/qt5/mkspecs/modules/qt_KReport3.pri
+"

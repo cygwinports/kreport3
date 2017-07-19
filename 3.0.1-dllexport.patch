@@ -1,0 +1,11 @@
+--- origsrc/kreport-3.0.1/tools/sdc.py	2017-03-09 03:22:42.329548100 -0600
++++ src/kreport-3.0.1/tools/sdc.py	2017-07-18 02:20:10.175280800 -0500
+@@ -855,7 +855,7 @@ def process():
+             if not data_class_ctor_changed:
+                 data_class_ctor = """    //! @internal data class used to implement %s shared class %s.
+     //! Provides thread-safe reference counting.
+-    class Data : public %s
++    class KREPORT_EXPORT Data : public %s
+     {
+     public:
+         Data()
