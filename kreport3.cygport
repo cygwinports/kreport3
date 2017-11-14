@@ -2,7 +2,7 @@ inherit kf5
 
 NAME="kreport3"
 VERSION=3.0.2
-RELEASE=1
+RELEASE=2
 CATEGORY="Libs"
 SUMMARY="KDE report generation library"
 DESCRIPTION="KReport is a framework for the creation and generation of reports
